@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HourFlow — Horas de trabajo, en el teléfono</title>
+    <meta
+      name="description"
+      content="HourFlow es una app Android local-first para registrar trabajos, turnos, tarifas mensuales y resúmenes en PDF o JPEG. Los datos se quedan en el dispositivo."
+    />
+    <meta property="og:title" content="HourFlow — Horas de trabajo, en el teléfono" />
+    <meta
+      property="og:description"
+      content="App Android local-first para trabajos, turnos, tarifas mensuales y resúmenes compartibles."
+    />
+    <meta property="og:image" content="screenshots/01-jobs-overview.png" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <div class="banner-wrap" id="inicio">
+      <a class="banner" href="https://github.com/roypm/hourflow/releases/tag/v1.1.0">
+        <span class="glyph" aria-hidden="true">
+          <svg viewBox="0 0 16 16" fill="none">
+            <path
+              d="M8 1.5l1.1 3.2L12.4 6 9.1 7.3 8 10.5 6.9 7.3 3.6 6l3.3-1.3L8 1.5z"
+              fill="currentColor"
+            />
+            <path
+              d="M12.2 9.2l.55 1.55 1.55.55-1.55.55-.55 1.55-.55-1.55-1.55-.55 1.55-.55.55-1.55z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+        <span>HourFlow 1.1.0 · plantillas semanales y mensuales</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="nav-wrap">
+      <nav class="nav" aria-label="Principal">
+        <a class="logo" href="#inicio">
+          <img src="logo.svg" alt="" width="22" height="22" />
+          HourFlow
+        </a>
+        <div class="nav-links">
+          <a href="#producto">Producto</a>
+          <a href="#pantallas">Pantallas</a>
+          <a href="#privacidad">Privacidad</a>
+        </div>
+        <a class="btn btn-primary" href="#descargar">Descargar</a>
+      </nav>
+    </div>
+
+    <main id="contenido">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <div class="brand-lockup">
+              <img src="logo.svg" alt="" width="44" height="44" />
+              <p class="eyebrow">App Android · local-first</p>
+            </div>
+            <h1>Tus horas se quedan en el teléfono.</h1>
+            <p class="lead">
+              HourFlow registra varios trabajos, turnos, tarifas mensuales y resúmenes que puedes
+              compartir. Sin cuenta, sin servidor y sin analítica.
+            </p>
+            <ul class="bullets">
+              <li>
+                <span class="glyph" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none">
+                    <path d="M3.5 8.2l3 3 6-6.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                Varios trabajos, cada uno por su cuenta
+              </li>
+              <li>
+                <span class="glyph" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none">
+                    <path d="M3.5 8.2l3 3 6-6.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                Turnos de noche que cruzan la medianoche
+              </li>
+              <li>
+                <span class="glyph" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none">
+                    <path d="M3.5 8.2l3 3 6-6.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                Una tarifa por mes, sin recalcular el pasado
+              </li>
+              <li>
+                <span class="glyph" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none">
+                    <path d="M3.5 8.2l3 3 6-6.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                Resúmenes en PDF y JPEG
+              </li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://github.com/roypm/hourflow/releases/download/v1.1.0/HourFlow-1.1.0.apk">
+                Descargar APK 1.1.0
+              </a>
+              <a class="btn btn-ghost" href="https://github.com/roypm/hourflow">Código en GitHub</a>
+            </div>
+          </div>
+
+          <figure class="hero-device">
+            <button
+              class="phone phone-hero"
+              type="button"
+              aria-label="Ampliar captura de trabajos"
+              data-full="screenshots/01-jobs-overview.png"
+              data-caption="Trabajos. Datos de ejemplo."
+            >
+              <img
+                src="screenshots/01-jobs-overview.png"
+                alt="Pantalla Mis trabajos: Animals, con 549 horas y 4392 dólares, y SuperCats sin registros."
+              />
+            </button>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="producto">
+        <div class="wrap split">
+          <div>
+            <h2>Qué lleva HourFlow</h2>
+            <p class="section-lead">
+              Un registro personal de horas. Cada mes conserva su tarifa, sus turnos y sus extras.
+            </p>
+          </div>
+          <ul class="facts glass">
+            <li><span>Varios trabajos</span><span class="num">01</span></li>
+            <li><span>Turnos de noche</span><span class="num">02</span></li>
+            <li><span>Tarifa del mes</span><span class="num">03</span></li>
+            <li><span>Plantillas</span><span class="num">04</span></li>
+            <li><span>Extras</span><span class="num">05</span></li>
+            <li><span>PDF y JPEG</span><span class="num">06</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="pantallas">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>La app, pantalla a pantalla</h2>
+            <p class="section-lead">
+              Del año completo al turno de un día. Las capturas usan datos de ejemplo.
+            </p>
+          </div>
+          <div class="carousel" data-carousel>
+            <div class="carousel-frame">
+              <button class="carousel-arrow" type="button" data-dir="-1" aria-label="Pantalla anterior">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M10 3.5L5.5 8 10 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="carousel-viewport" tabindex="0" aria-label="Capturas de HourFlow">
+                <div class="carousel-track">
+                  <article class="slide" data-index="0" data-title="Trabajos" data-caption="Cada trabajo guarda sus horas, su dinero y sus meses activos.">
+                    <button class="phone" type="button" aria-label="Ampliar Trabajos" data-full="screenshots/01-jobs-overview.png" data-caption="Trabajos. Datos de ejemplo.">
+                      <img src="screenshots/01-jobs-overview.png" alt="Lista de trabajos con horas y dinero acumulados." />
+                    </button>
+                  </article>
+                  <article class="slide" data-index="1" data-title="El año" data-caption="Un vistazo al año, con horas y dinero en cada mes.">
+                    <button class="phone" type="button" aria-label="Ampliar El año" data-full="screenshots/02-month-calendar.png" data-caption="Año del trabajo. Datos de ejemplo.">
+                      <img src="screenshots/02-month-calendar.png" alt="Vista anual de Animals en 2026, con horas y dinero por mes." />
+                    </button>
+                  </article>
+                  <article class="slide" data-index="2" data-title="El turno" data-caption="Turnos de día o de noche, con tarifa propia si hace falta.">
+                    <button class="phone" type="button" aria-label="Ampliar El turno" data-full="screenshots/03-shift-editor.png" data-caption="Editor de turno. Datos de ejemplo.">
+                      <img src="screenshots/03-shift-editor.png" alt="Editor de horas del 6 de julio de 2026, turno de noche de 20:00 a 01:00." />
+                    </button>
+                  </article>
+                  <article class="slide" data-index="3" data-title="El resumen" data-caption="El mes listo para exportar en PDF o JPEG.">
+                    <button class="phone" type="button" aria-label="Ampliar El resumen" data-full="screenshots/04-summary-export.png" data-caption="Resumen mensual. Datos de ejemplo.">
+                      <img src="screenshots/04-summary-export.png" alt="Resumen de abril de 2026 con exportación a PDF y JPEG." />
+                    </button>
+                  </article>
+                  <article class="slide" data-index="4" data-title="Ajustes" data-caption="Tema, idioma y copia JSON en el dispositivo.">
+                    <button class="phone" type="button" aria-label="Ampliar Ajustes" data-full="screenshots/05-settings-backup.png" data-caption="Ajustes y copia. Datos de ejemplo.">
+                      <img src="screenshots/05-settings-backup.png" alt="Ajustes de tema, idioma y copia de seguridad JSON." />
+                    </button>
+                  </article>
+                  <article class="slide" data-index="5" data-title="Tema claro" data-caption="La misma vista anual, con el tema claro.">
+                    <button class="phone" type="button" aria-label="Ampliar Tema claro" data-full="screenshots/06-light-mode.png" data-caption="Tema claro. Datos de ejemplo.">
+                      <img src="screenshots/06-light-mode.png" alt="La misma vista anual de Animals en tema claro." />
+                    </button>
+                  </article>
+                </div>
+              </div>
+              <button class="carousel-arrow" type="button" data-dir="1" aria-label="Pantalla siguiente">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M6 3.5L10.5 8 6 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="carousel-meta">
+              <p class="carousel-title"></p>
+              <p class="carousel-caption" aria-live="polite"></p>
+            </div>
+            <div class="carousel-tabs" role="tablist" aria-label="Elegir pantalla">
+              <button type="button" role="tab" data-goto="0" aria-selected="true">Trabajos</button>
+              <button type="button" role="tab" data-goto="1">El año</button>
+              <button type="button" role="tab" data-goto="2">El turno</button>
+              <button type="button" role="tab" data-goto="3">El resumen</button>
+              <button type="button" role="tab" data-goto="4">Ajustes</button>
+              <button type="button" role="tab" data-goto="5">Tema claro</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="resumen">
+        <div class="wrap export-grid">
+          <div>
+            <h2>Un resumen listo para enviar</h2>
+            <p class="section-lead">
+              El JPEG y el PDF salen con el mismo criterio: horas del mes, extras y el total a pagar.
+              El nombre del archivo ordena solo, por ejemplo
+              <span class="file">2026-08_Restaurante_Joan.pdf</span>.
+            </p>
+          </div>
+          <figure class="document glass">
+            <img
+              class="document-frame"
+              src="screenshots/07-exported-jpeg.jpg"
+              alt="JPEG exportado de Roy, Animals, abril 2026: 32 horas, 50 dólares extra y 306 dólares a pagar."
+            />
+            <figcaption>JPEG exportado · datos de ejemplo</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="privacidad">
+        <div class="wrap">
+          <h2>En el dispositivo</h2>
+          <p class="section-lead privacy-lead">
+            HourFlow es de una sola persona y funciona sin red. La red solo hace falta si abres la página de versiones para actualizar.
+          </p>
+          <div class="card-grid">
+            <article class="glass">
+              <h3>Lo que se queda</h3>
+              <p>Trabajos, turnos, tarifas, extras y plantillas viven en Room, en el teléfono. No hay cuenta ni analítica.</p>
+            </article>
+            <article class="glass">
+              <h3>Lo que sale, si tú lo exportas</h3>
+              <p>Un JSON de copia, un PDF o un JPEG del mes. Antes de instalar un APK a mano, exporta esa copia desde Ajustes.</p>
+            </article>
+            <article class="glass">
+              <h3>Idioma y tema</h3>
+              <p>Español, inglés o catalán. Tema del sistema, claro u oscuro. La interfaz sigue la preferencia del teléfono.</p>
+            </article>
+          </div>
+          <ul class="stack" aria-label="Tecnologías">
+            <li>Kotlin</li>
+            <li>Jetpack Compose</li>
+            <li>Material 3</li>
+            <li>Room</li>
+            <li>DataStore</li>
+            <li>MIT</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section download" id="descargar">
+        <div class="wrap download-panel glass">
+          <div>
+            <div class="version-row">
+              <img class="version-mark" src="logo.svg" alt="" width="18" height="18" />
+              <p class="eyebrow">Versión actual</p>
+            </div>
+            <h2>HourFlow 1.1.0</h2>
+            <p class="section-lead">
+              Plantillas semanales y mensuales, resúmenes en PDF y JPEG, y copias JSON compatibles con versiones anteriores.
+              El APK pesa unos 8,4 MB.
+            </p>
+            <p class="note">
+              HourFlow no se actualiza solo. Exporta la copia JSON antes de instalar. Si Android rechaza la actualización
+              porque la clave de firma es distinta, desinstala, instala el APK nuevo e importa la copia.
+            </p>
+          </div>
+          <div class="download-actions">
+            <a class="btn btn-primary" href="https://github.com/roypm/hourflow/releases/download/v1.1.0/HourFlow-1.1.0.apk">
+              Descargar APK
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/roypm/hourflow/releases/latest">Todas las versiones</a>
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/roypm/hourflow/releases/download/v1.1.0/SHA256SUMS.txt"
+              title="Suma SHA-256 para comprobar que el APK descargado no se ha alterado"
+            >
+              Comprobar descarga
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-row">
+        <a class="logo" href="#inicio">
+          <img src="logo.svg" alt="" width="22" height="22" />
+          HourFlow
+        </a>
+        <p>hecho por RoyPM</p>
+        <p>
+          <a href="https://github.com/roypm/hourflow">GitHub</a>
+          <a href="https://github.com/roypm/hourflow/blob/main/LICENSE">MIT</a>
+        </p>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox">
+      <form method="dialog">
+        <button class="lightbox-close" type="submit" aria-label="Cerrar">Cerrar</button>
+      </form>
+      <img id="lightbox-image" alt="" />
+      <p id="lightbox-caption"></p>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
