@@ -102,6 +102,31 @@ a {
   padding-inline: 16px;
 }
 
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 58px;
+  min-height: 36px;
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  border-radius: 9999px;
+  background: var(--surface);
+  color: var(--ash);
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.language-chevron {
+  width: 13px;
+  height: 13px;
+  transition: transform 160ms ease;
+}
+
 .banner-wrap {
   padding-top: 20px;
 }
@@ -113,8 +138,7 @@ a {
 .btn-ghost,
 .carousel-arrow,
 .carousel-tabs button,
-.stack li,
-.lightbox-close {
+.stack li {
   border: 1px solid var(--line);
 }
 
@@ -185,8 +209,7 @@ a {
 
 .nav-links a,
 .btn-ghost,
-.carousel-arrow,
-.lightbox-close {
+.carousel-arrow {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -373,7 +396,7 @@ h2 {
   border-radius: 36px;
   background: rgba(255, 255, 255, 0.05);
   overflow: hidden;
-  cursor: pointer;
+  cursor: default;
 }
 
 .phone-hero {
@@ -652,10 +675,94 @@ h2 {
   font-size: 13px;
 }
 
-.footer p {
+.footer p,
+.footer-links {
   display: flex;
+  align-items: center;
   gap: 16px;
   margin: 0;
+}
+
+.language-menu {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.language-menu > summary {
+  list-style: none;
+}
+
+.language-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu > summary:hover,
+.language-menu[open] > summary {
+  border-color: rgba(237, 237, 237, 0.24);
+  background: rgba(255, 255, 255, 0.09);
+  color: var(--bone);
+}
+
+.language-menu[open] .language-chevron {
+  transform: rotate(180deg);
+}
+
+.language-menu-options {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 8px);
+  z-index: 20;
+  display: none;
+  min-width: 154px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--surface-strong);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(18px);
+}
+
+.language-menu[open] .language-menu-options {
+  display: grid;
+  gap: 2px;
+}
+
+.language-menu-options button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  min-height: 34px;
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ash);
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.language-menu-options button:hover,
+.language-menu-options button[aria-pressed="true"] {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--bone);
+}
+
+.language-option-code {
+  color: var(--slate);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
+.language-menu-options button[aria-pressed="true"] .language-option-code {
+  color: var(--bone);
+}
+
+.footer .author-credit {
+  display: block;
 }
 
 .footer a {
@@ -663,50 +770,15 @@ h2 {
   text-decoration: none;
 }
 
+.footer .author-link:hover {
+  color: var(--bone);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .footer .logo {
   margin: 0;
   color: var(--ash);
-}
-
-.lightbox {
-  width: min(420px, calc(100vw - 32px));
-  max-height: calc(100dvh - 32px);
-  padding: 16px;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: #22242e;
-  color: var(--bone);
-}
-
-.lightbox::backdrop {
-  background: rgba(26, 28, 36, 0.86);
-  backdrop-filter: blur(8px);
-}
-
-.lightbox form {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 0 12px;
-}
-
-.lightbox-close {
-  padding: 6px 14px;
-  background: transparent;
-}
-
-.lightbox img {
-  width: auto;
-  max-width: 100%;
-  max-height: calc(100dvh - 140px);
-  margin-inline: auto;
-  border-radius: 16px;
-  object-fit: contain;
-}
-
-.lightbox p {
-  margin: 12px 0 0;
-  color: var(--ash);
-  font-size: 14px;
 }
 
 @media (max-width: 900px) {
@@ -793,6 +865,11 @@ h2 {
     align-items: flex-start;
     flex-direction: column;
   }
+
+  .language-menu-options {
+    right: auto;
+    left: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -801,6 +878,11 @@ h2 {
   }
 
   .slide {
+    transition: none;
+  }
+
+  .language-switch,
+  .language-chevron {
     transition: none;
   }
 }

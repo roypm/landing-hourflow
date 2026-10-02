@@ -8,7 +8,6 @@ document.querySelectorAll('a[href="#inicio"]').forEach((link) => {
   });
 });
 const carousel = document.querySelector("[data-carousel]");
-let goToSlide = () => {};
 
 if (carousel) {
   const viewport = carousel.querySelector(".carousel-viewport");
@@ -25,8 +24,9 @@ if (carousel) {
     active = index;
     slides.forEach((slide, i) => slide.classList.toggle("is-active", i === index));
     tabs.forEach((tab, i) => tab.setAttribute("aria-selected", i === index ? "true" : "false"));
-    title.textContent = slides[index].dataset.title ?? "";
-    caption.textContent = slides[index].dataset.caption ?? "";
+    const slideKey = slides[index].dataset.slide;
+    title.textContent = window.HourFlowI18n.t(`slide.${slideKey}.title`);
+    caption.textContent = window.HourFlowI18n.t(`slide.${slideKey}.caption`);
     prev.disabled = index === 0;
     next.disabled = index === slides.length - 1;
   };
@@ -50,7 +50,7 @@ if (carousel) {
     return best;
   };
 
-  goToSlide = (index) => {
+  const goToSlide = (index) => {
     const nextIndex = Math.max(0, Math.min(slides.length - 1, index));
     const delta = distanceFromCenter(slides[nextIndex]);
     viewport.scrollTo({
@@ -91,24 +91,5 @@ if (carousel) {
   });
 
   setActive(0);
+  window.addEventListener("hourflow:languagechange", () => setActive(active));
 }
-
-const lightbox = document.querySelector("#lightbox");
-const lightboxImage = document.querySelector("#lightbox-image");
-const lightboxCaption = document.querySelector("#lightbox-caption");
-
-document.querySelectorAll("[data-full]").forEach((trigger) => {
-  trigger.addEventListener("click", () => {
-    const slide = trigger.closest(".slide");
-    if (slide && !slide.classList.contains("is-active")) {
-      goToSlide(Number(slide.dataset.index));
-      return;
-    }
-
-    const preview = trigger.querySelector("img");
-    lightboxImage.src = trigger.getAttribute("data-full");
-    lightboxImage.alt = preview?.alt ?? "";
-    lightboxCaption.textContent = trigger.getAttribute("data-caption") ?? "";
-    lightbox.showModal();
-  });
-});

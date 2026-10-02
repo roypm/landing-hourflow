@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HourFlow — Horas de trabajo, en el teléfono</title>
+    <title data-i18n="meta.title">HourFlow — Work hours, right on your phone</title>
     <meta
       name="description"
-      content="HourFlow es una app Android local-first para registrar trabajos, turnos, tarifas mensuales y resúmenes en PDF o JPEG. Los datos se quedan en el dispositivo."
+      content="HourFlow is an offline-first Android app for tracking jobs, shifts, monthly pay and summaries you can share as PDF or JPEG. Your data stays on your device."
+      data-i18n-content="meta.description"
     />
-    <meta property="og:title" content="HourFlow — Horas de trabajo, en el teléfono" />
+    <meta property="og:title" content="HourFlow — Work hours, right on your phone" data-i18n-content="meta.title" />
     <meta
       property="og:description"
-      content="App Android local-first para trabajos, turnos, tarifas mensuales y resúmenes compartibles."
+      content="An offline-first Android app for tracking jobs, shifts, monthly pay and shareable summaries."
+      data-i18n-content="meta.ogDescription"
     />
     <meta property="og:image" content="screenshots/01-jobs-overview.png" />
     <meta property="og:type" content="website" />
@@ -25,10 +27,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <a class="skip" href="#contenido" data-i18n="a11y.skip">Skip to content</a>
 
     <div class="banner-wrap" id="inicio">
-      <a class="banner" href="https://github.com/roypm/hourflow/releases/tag/v1.1.0">
+    <a class="banner" href="https://github.com/roypm/hourflow/releases/tag/v1.1.0" target="_blank" rel="noopener noreferrer">
         <span class="glyph" aria-hidden="true">
           <svg viewBox="0 0 16 16" fill="none">
             <path
@@ -41,23 +43,23 @@
             />
           </svg>
         </span>
-        <span>HourFlow 1.1.0 · plantillas semanales y mensuales</span>
+        <span data-i18n="banner">HourFlow 1.1.0 · weekly and monthly templates</span>
         <span aria-hidden="true">→</span>
       </a>
     </div>
 
     <div class="nav-wrap">
-      <nav class="nav" aria-label="Principal">
+      <nav class="nav" aria-label="Main" data-i18n-aria-label="a11y.nav">
         <a class="logo" href="#inicio">
           <img src="logo.svg" alt="" width="22" height="22" />
           HourFlow
         </a>
         <div class="nav-links">
-          <a href="#producto">Producto</a>
-          <a href="#pantallas">Pantallas</a>
-          <a href="#privacidad">Privacidad</a>
+          <a href="#producto" data-i18n="nav.product">Product</a>
+          <a href="#pantallas" data-i18n="nav.screens">Screens</a>
+          <a href="#privacidad" data-i18n="nav.privacy">Privacy</a>
         </div>
-        <a class="btn btn-primary" href="#descargar">Descargar</a>
+        <a class="btn btn-primary" href="#descargar" data-i18n="nav.download">Download</a>
       </nav>
     </div>
 
@@ -67,13 +69,10 @@
           <div class="hero-copy">
             <div class="brand-lockup">
               <img src="logo.svg" alt="" width="44" height="44" />
-              <p class="eyebrow">App Android · local-first</p>
+              <p class="eyebrow" data-i18n="hero.eyebrow">Android app · works offline</p>
             </div>
-            <h1>Tus horas se quedan en el teléfono.</h1>
-            <p class="lead">
-              HourFlow registra varios trabajos, turnos, tarifas mensuales y resúmenes que puedes
-              compartir. Sin cuenta, sin servidor y sin analítica.
-            </p>
+            <h1 data-i18n="hero.title">Your work hours stay on your phone.</h1>
+            <p class="lead" data-i18n="hero.lead">Track multiple jobs, shifts, monthly pay rates and summaries you can share. No account, server or analytics.</p>
             <ul class="bullets">
               <li>
                 <span class="glyph" aria-hidden="true">
@@ -81,7 +80,7 @@
                     <path d="M3.5 8.2l3 3 6-6.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </span>
-                Varios trabajos, cada uno por su cuenta
+                <span data-i18n="hero.bullet.jobs">Track each job separately</span>
               </li>
               <li>
                 <span class="glyph" aria-hidden="true">
@@ -89,7 +88,7 @@
                     <path d="M3.5 8.2l3 3 6-6.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </span>
-                Turnos de noche que cruzan la medianoche
+                <span data-i18n="hero.bullet.overnight">Overnight shifts, even across midnight</span>
               </li>
               <li>
                 <span class="glyph" aria-hidden="true">
@@ -97,7 +96,7 @@
                     <path d="M3.5 8.2l3 3 6-6.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </span>
-                Una tarifa por mes, sin recalcular el pasado
+                <span data-i18n="hero.bullet.rates">Set a rate for each month; past totals stay unchanged</span>
               </li>
               <li>
                 <span class="glyph" aria-hidden="true">
@@ -105,30 +104,25 @@
                     <path d="M3.5 8.2l3 3 6-6.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </span>
-                Resúmenes en PDF y JPEG
+                <span data-i18n="hero.bullet.exports">Share monthly summaries as PDF or JPEG</span>
               </li>
             </ul>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="https://github.com/roypm/hourflow/releases/download/v1.1.0/HourFlow-1.1.0.apk">
-                Descargar APK 1.1.0
+              <a class="btn btn-primary" href="https://github.com/roypm/hourflow/releases/download/v1.1.0/HourFlow-1.1.0.apk" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="hero.download">Download APK 1.1.0</span>
               </a>
-              <a class="btn btn-ghost" href="https://github.com/roypm/hourflow">Código en GitHub</a>
+              <a class="btn btn-ghost" href="https://github.com/roypm/hourflow" target="_blank" rel="noopener noreferrer" data-i18n="hero.github">View on GitHub</a>
             </div>
           </div>
 
           <figure class="hero-device">
-            <button
-              class="phone phone-hero"
-              type="button"
-              aria-label="Ampliar captura de trabajos"
-              data-full="screenshots/01-jobs-overview.png"
-              data-caption="Trabajos. Datos de ejemplo."
-            >
+            <div class="phone">
               <img
                 src="screenshots/01-jobs-overview.png"
-                alt="Pantalla Mis trabajos: Animals, con 549 horas y 4392 dólares, y SuperCats sin registros."
+                alt="HourFlow jobs screen showing Animals with 549 hours and $4,392 earned, and SuperCats with no entries."
+                data-i18n-alt="image.heroAlt"
               />
-            </button>
+            </div>
           </figure>
         </div>
       </section>
@@ -136,18 +130,16 @@
       <section class="section" id="producto">
         <div class="wrap split">
           <div>
-            <h2>Qué lleva HourFlow</h2>
-            <p class="section-lead">
-              Un registro personal de horas. Cada mes conserva su tarifa, sus turnos y sus extras.
-            </p>
+            <h2 data-i18n="product.title">What HourFlow includes</h2>
+            <p class="section-lead" data-i18n="product.lead">A personal work log. Each month keeps its own pay rate, shifts and extras.</p>
           </div>
           <ul class="facts glass">
-            <li><span>Varios trabajos</span><span class="num">01</span></li>
-            <li><span>Turnos de noche</span><span class="num">02</span></li>
-            <li><span>Tarifa del mes</span><span class="num">03</span></li>
-            <li><span>Plantillas</span><span class="num">04</span></li>
-            <li><span>Extras</span><span class="num">05</span></li>
-            <li><span>PDF y JPEG</span><span class="num">06</span></li>
+            <li><span data-i18n="product.fact.jobs">Multiple jobs</span><span class="num">01</span></li>
+            <li><span data-i18n="product.fact.shifts">Overnight shifts</span><span class="num">02</span></li>
+            <li><span data-i18n="product.fact.rates">Monthly pay rates</span><span class="num">03</span></li>
+            <li><span data-i18n="product.fact.templates">Templates</span><span class="num">04</span></li>
+            <li><span data-i18n="product.fact.extras">Extras</span><span class="num">05</span></li>
+            <li><span data-i18n="product.fact.exports">PDF and JPEG</span><span class="num">06</span></li>
           </ul>
         </div>
       </section>
@@ -155,53 +147,51 @@
       <section class="section" id="pantallas">
         <div class="wrap">
           <div class="section-head">
-            <h2>La app, pantalla a pantalla</h2>
-            <p class="section-lead">
-              Del año completo al turno de un día. Las capturas usan datos de ejemplo.
-            </p>
+            <h2 data-i18n="screens.title">A closer look at the app</h2>
+            <p class="section-lead" data-i18n="screens.lead">From the full year to a single shift. Screenshots show sample data.</p>
           </div>
           <div class="carousel" data-carousel>
             <div class="carousel-frame">
-              <button class="carousel-arrow" type="button" data-dir="-1" aria-label="Pantalla anterior">
+              <button class="carousel-arrow" type="button" data-dir="-1" aria-label="Previous screen" data-i18n-aria-label="a11y.previous">
                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path d="M10 3.5L5.5 8 10 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </button>
-              <div class="carousel-viewport" tabindex="0" aria-label="Capturas de HourFlow">
+              <div class="carousel-viewport" tabindex="0" aria-label="HourFlow screenshots" data-i18n-aria-label="a11y.screenshots">
                 <div class="carousel-track">
-                  <article class="slide" data-index="0" data-title="Trabajos" data-caption="Cada trabajo guarda sus horas, su dinero y sus meses activos.">
-                    <button class="phone" type="button" aria-label="Ampliar Trabajos" data-full="screenshots/01-jobs-overview.png" data-caption="Trabajos. Datos de ejemplo.">
-                      <img src="screenshots/01-jobs-overview.png" alt="Lista de trabajos con horas y dinero acumulados." />
-                    </button>
+                  <article class="slide" data-index="0" data-slide="jobs">
+                    <div class="phone">
+                      <img src="screenshots/01-jobs-overview.png" alt="Jobs list with tracked hours and earnings." data-i18n-alt="image.jobsAlt" />
+                    </div>
                   </article>
-                  <article class="slide" data-index="1" data-title="El año" data-caption="Un vistazo al año, con horas y dinero en cada mes.">
-                    <button class="phone" type="button" aria-label="Ampliar El año" data-full="screenshots/02-month-calendar.png" data-caption="Año del trabajo. Datos de ejemplo.">
-                      <img src="screenshots/02-month-calendar.png" alt="Vista anual de Animals en 2026, con horas y dinero por mes." />
-                    </button>
+                  <article class="slide" data-index="1" data-slide="year">
+                    <div class="phone">
+                      <img src="screenshots/02-month-calendar.png" alt="Animals yearly view for 2026, with hours and earnings for each month." data-i18n-alt="image.yearAlt" />
+                    </div>
                   </article>
-                  <article class="slide" data-index="2" data-title="El turno" data-caption="Turnos de día o de noche, con tarifa propia si hace falta.">
-                    <button class="phone" type="button" aria-label="Ampliar El turno" data-full="screenshots/03-shift-editor.png" data-caption="Editor de turno. Datos de ejemplo.">
-                      <img src="screenshots/03-shift-editor.png" alt="Editor de horas del 6 de julio de 2026, turno de noche de 20:00 a 01:00." />
-                    </button>
+                  <article class="slide" data-index="2" data-slide="shift">
+                    <div class="phone">
+                      <img src="screenshots/03-shift-editor.png" alt="Shift editor for 6 July 2026, an overnight shift from 20:00 to 01:00." data-i18n-alt="image.shiftAlt" />
+                    </div>
                   </article>
-                  <article class="slide" data-index="3" data-title="El resumen" data-caption="El mes listo para exportar en PDF o JPEG.">
-                    <button class="phone" type="button" aria-label="Ampliar El resumen" data-full="screenshots/04-summary-export.png" data-caption="Resumen mensual. Datos de ejemplo.">
-                      <img src="screenshots/04-summary-export.png" alt="Resumen de abril de 2026 con exportación a PDF y JPEG." />
-                    </button>
+                  <article class="slide" data-index="3" data-slide="summary">
+                    <div class="phone">
+                      <img src="screenshots/04-summary-export.png" alt="April 2026 summary with PDF and JPEG export options." data-i18n-alt="image.summaryAlt" />
+                    </div>
                   </article>
-                  <article class="slide" data-index="4" data-title="Ajustes" data-caption="Tema, idioma y copia JSON en el dispositivo.">
-                    <button class="phone" type="button" aria-label="Ampliar Ajustes" data-full="screenshots/05-settings-backup.png" data-caption="Ajustes y copia. Datos de ejemplo.">
-                      <img src="screenshots/05-settings-backup.png" alt="Ajustes de tema, idioma y copia de seguridad JSON." />
-                    </button>
+                  <article class="slide" data-index="4" data-slide="settings">
+                    <div class="phone">
+                      <img src="screenshots/05-settings-backup.png" alt="Theme, language and JSON backup settings." data-i18n-alt="image.settingsAlt" />
+                    </div>
                   </article>
-                  <article class="slide" data-index="5" data-title="Tema claro" data-caption="La misma vista anual, con el tema claro.">
-                    <button class="phone" type="button" aria-label="Ampliar Tema claro" data-full="screenshots/06-light-mode.png" data-caption="Tema claro. Datos de ejemplo.">
-                      <img src="screenshots/06-light-mode.png" alt="La misma vista anual de Animals en tema claro." />
-                    </button>
+                  <article class="slide" data-index="5" data-slide="lightTheme">
+                    <div class="phone">
+                      <img src="screenshots/06-light-mode.png" alt="Animals yearly view in the light theme." data-i18n-alt="image.lightThemeAlt" />
+                    </div>
                   </article>
                 </div>
               </div>
-              <button class="carousel-arrow" type="button" data-dir="1" aria-label="Pantalla siguiente">
+              <button class="carousel-arrow" type="button" data-dir="1" aria-label="Next screen" data-i18n-aria-label="a11y.next">
                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path d="M6 3.5L10.5 8 6 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -211,13 +201,13 @@
               <p class="carousel-title"></p>
               <p class="carousel-caption" aria-live="polite"></p>
             </div>
-            <div class="carousel-tabs" role="tablist" aria-label="Elegir pantalla">
-              <button type="button" role="tab" data-goto="0" aria-selected="true">Trabajos</button>
-              <button type="button" role="tab" data-goto="1">El año</button>
-              <button type="button" role="tab" data-goto="2">El turno</button>
-              <button type="button" role="tab" data-goto="3">El resumen</button>
-              <button type="button" role="tab" data-goto="4">Ajustes</button>
-              <button type="button" role="tab" data-goto="5">Tema claro</button>
+            <div class="carousel-tabs" role="tablist" aria-label="Choose a screen" data-i18n-aria-label="a11y.chooseScreen">
+              <button type="button" role="tab" data-goto="0" aria-selected="true" data-i18n="slide.jobs.title">Jobs</button>
+              <button type="button" role="tab" data-goto="1" data-i18n="slide.year.title">The year</button>
+              <button type="button" role="tab" data-goto="2" data-i18n="slide.shift.title">A shift</button>
+              <button type="button" role="tab" data-goto="3" data-i18n="slide.summary.title">Monthly summary</button>
+              <button type="button" role="tab" data-goto="4" data-i18n="slide.settings.title">Settings</button>
+              <button type="button" role="tab" data-goto="5" data-i18n="slide.lightTheme.title">Light theme</button>
             </div>
           </div>
         </div>
@@ -226,10 +216,9 @@
       <section class="section" id="resumen">
         <div class="wrap export-grid">
           <div>
-            <h2>Un resumen listo para enviar</h2>
-            <p class="section-lead">
-              El JPEG y el PDF salen con el mismo criterio: horas del mes, extras y el total a pagar.
-              El nombre del archivo ordena solo, por ejemplo
+            <h2 data-i18n="export.title">A clear summary, ready to share</h2>
+            <p class="section-lead" data-i18n-html="export.lead">
+              PDF and JPEG exports include the month's hours, extras and total pay. Files are named to stay in order, for example
               <span class="file">2026-08_Restaurante_Joan.pdf</span>.
             </p>
           </div>
@@ -237,34 +226,35 @@
             <img
               class="document-frame"
               src="screenshots/07-exported-jpeg.jpg"
-              alt="JPEG exportado de Roy, Animals, abril 2026: 32 horas, 50 dólares extra y 306 dólares a pagar."
+              alt="Exported April 2026 JPEG for Roy at Animals: 32 hours, $50 in extras and $306 total pay."
+              data-i18n-alt="image.exportAlt"
             />
-            <figcaption>JPEG exportado · datos de ejemplo</figcaption>
+            <figcaption data-i18n="export.figcaption">Example JPEG export · sample data</figcaption>
           </figure>
         </div>
       </section>
 
       <section class="section" id="privacidad">
         <div class="wrap">
-          <h2>En el dispositivo</h2>
-          <p class="section-lead privacy-lead">
-            HourFlow es de una sola persona y funciona sin red. La red solo hace falta si abres la página de versiones para actualizar.
+          <h2 data-i18n="privacy.title">Your data stays on your device</h2>
+          <p class="section-lead privacy-lead" data-i18n="privacy.lead">
+            HourFlow is designed for one person and works offline. You only need an internet connection to check for updates.
           </p>
           <div class="card-grid">
             <article class="glass">
-              <h3>Lo que se queda</h3>
-              <p>Trabajos, turnos, tarifas, extras y plantillas viven en Room, en el teléfono. No hay cuenta ni analítica.</p>
+              <h3 data-i18n="privacy.card.stays.title">What stays on your phone</h3>
+              <p data-i18n="privacy.card.stays.body">Jobs, shifts, rates, extras and templates are stored on your phone. No account or analytics.</p>
             </article>
             <article class="glass">
-              <h3>Lo que sale, si tú lo exportas</h3>
-              <p>Un JSON de copia, un PDF o un JPEG del mes. Antes de instalar un APK a mano, exporta esa copia desde Ajustes.</p>
+              <h3 data-i18n="privacy.card.exports.title">What leaves, when you choose</h3>
+              <p data-i18n="privacy.card.exports.body">A JSON backup, or a monthly summary as PDF or JPEG. Export a backup from Settings before installing an APK manually.</p>
             </article>
             <article class="glass">
-              <h3>Idioma y tema</h3>
-              <p>Español, inglés o catalán. Tema del sistema, claro u oscuro. La interfaz sigue la preferencia del teléfono.</p>
+              <h3 data-i18n="privacy.card.preferences.title">Language and appearance</h3>
+              <p data-i18n="privacy.card.preferences.body">Choose Spanish, English or Catalan, and follow your system theme or use light or dark mode.</p>
             </article>
           </div>
-          <ul class="stack" aria-label="Tecnologías">
+          <ul class="stack" aria-label="Built with" data-i18n-aria-label="a11y.technologies">
             <li>Kotlin</li>
             <li>Jetpack Compose</li>
             <li>Material 3</li>
@@ -280,30 +270,21 @@
           <div>
             <div class="version-row">
               <img class="version-mark" src="logo.svg" alt="" width="18" height="18" />
-              <p class="eyebrow">Versión actual</p>
+              <p class="eyebrow" data-i18n="download.currentVersion">Current version</p>
             </div>
             <h2>HourFlow 1.1.0</h2>
-            <p class="section-lead">
-              Plantillas semanales y mensuales, resúmenes en PDF y JPEG, y copias JSON compatibles con versiones anteriores.
-              El APK pesa unos 8,4 MB.
+            <p class="section-lead" data-i18n="download.lead">
+              Weekly and monthly templates, PDF and JPEG summaries, and JSON backups that work with older versions. The APK is about 8.4 MB.
             </p>
-            <p class="note">
-              HourFlow no se actualiza solo. Exporta la copia JSON antes de instalar. Si Android rechaza la actualización
-              porque la clave de firma es distinta, desinstala, instala el APK nuevo e importa la copia.
+            <p class="note" data-i18n="download.note">
+              HourFlow does not update automatically. Export your JSON backup before installing. If Android rejects the update because it was signed with a different key, uninstall the existing app, install the new APK, then import your backup.
             </p>
           </div>
           <div class="download-actions">
-            <a class="btn btn-primary" href="https://github.com/roypm/hourflow/releases/download/v1.1.0/HourFlow-1.1.0.apk">
-              Descargar APK
+            <a class="btn btn-primary" href="https://github.com/roypm/hourflow/releases/download/v1.1.0/HourFlow-1.1.0.apk" target="_blank" rel="noopener noreferrer">
+              <span data-i18n="download.apk">Download APK</span>
             </a>
-            <a class="btn btn-ghost" href="https://github.com/roypm/hourflow/releases/latest">Todas las versiones</a>
-            <a
-              class="btn btn-ghost"
-              href="https://github.com/roypm/hourflow/releases/download/v1.1.0/SHA256SUMS.txt"
-              title="Suma SHA-256 para comprobar que el APK descargado no se ha alterado"
-            >
-              Comprobar descarga
-            </a>
+            <a class="btn btn-ghost" href="https://github.com/roypm/hourflow/releases/latest" target="_blank" rel="noopener noreferrer" data-i18n="download.releases">All releases</a>
           </div>
         </div>
       </section>
@@ -315,22 +296,29 @@
           <img src="logo.svg" alt="" width="22" height="22" />
           HourFlow
         </a>
-        <p>hecho por RoyPM</p>
-        <p>
-          <a href="https://github.com/roypm/hourflow">GitHub</a>
-          <a href="https://github.com/roypm/hourflow/blob/main/LICENSE">MIT</a>
-        </p>
+        <p class="author-credit"><span data-i18n="footer.madeBy">Made by</span> <a class="author-link" href="https://github.com/roypm" target="_blank" rel="noopener noreferrer">RoyPM</a></p>
+        <div class="footer-links">
+          <details class="language-menu">
+            <summary class="language-switch" aria-label="Language: English" data-i18n-aria-label="a11y.language">
+              <span class="language-code">EN</span>
+              <svg class="language-chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </summary>
+            <div class="language-menu-options" role="group" aria-label="Choose a language" data-i18n-aria-label="a11y.chooseLanguage">
+              <button type="button" data-language="en" lang="en"><span>English</span><span class="language-option-code">EN</span></button>
+              <button type="button" data-language="es" lang="es"><span>Español</span><span class="language-option-code">ES</span></button>
+              <button type="button" data-language="ca" lang="ca"><span>Català</span><span class="language-option-code">CA</span></button>
+            </div>
+          </details>
+          <a href="https://github.com/roypm/hourflow" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/roypm/hourflow/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT</a>
+        </div>
       </div>
     </footer>
 
-    <dialog class="lightbox" id="lightbox">
-      <form method="dialog">
-        <button class="lightbox-close" type="submit" aria-label="Cerrar">Cerrar</button>
-      </form>
-      <img id="lightbox-image" alt="" />
-      <p id="lightbox-caption"></p>
-    </dialog>
-
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
